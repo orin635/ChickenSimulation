@@ -23,7 +23,7 @@ Run the MainWorld scene to start the simulation.
 Use the sliders in the UI to adjust the food spawn rate and hunger timer.
 
 # How it works
-The simulation consists of multiple chickens that exhibit natural behaviors such as walking, searching for food, and mating. The environment includes randomly spawning food objects, which the chickens can find and consume to reduce their hunger levels. When two chickens are close enough and meet certain conditions, they can mate and produce a new chicken.
+The simulation consists of multiple chickens that exhibit natural behaviors such as walking, searching for food, and mating. The environment includes randomly spawning food objects, which the chickens can find and consume to reduce their hunger levels. When two chickens are close enough and have low enough hunger levels, they can mate and produce a new chicken.
 
 The project uses various classes and scenes to organize the behaviors and interactions:
 
