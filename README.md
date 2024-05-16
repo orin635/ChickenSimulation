@@ -40,12 +40,11 @@ MainWorld: Manages the overall simulation, including spawning food and chickens.
 |Food.gd | Self written |
 |Coop.gd | Self written |
 |fence.obj | Free Model from Free3D |
-||grass.obj | Free Model from Free3D |
+|grass.obj | Free Model from Free3D |
 |tree.obj | Free Model from Free3D |
 |coop.obj | Free Model from Free3D |
 
 
-Orin McDonogh
 What I did: I designed and implemented the core simulation mechanics, including chicken behaviors, food spawning, and mating interactions. I also created the UI for controlling various parameters of the simulation.
 What I am most proud of: I am most proud of the natural-looking movement and interaction of the chickens, and the flexibility provided by the UI for adjusting the simulation parameters in real-time.
 What I learned: I learned a lot about using Godot for creating dynamic simulations and managing complex interactions between multiple entities in a 3D environment. I also improved my skills in creating intuitive user interfaces.
@@ -55,4 +54,3 @@ What I learned: I learned a lot about using Godot for creating dynamic simulatio
 Godot Documentation - https://docs.godotengine.org/en/3.2/index.html
 
 
-"# ChickenSimulation" 
