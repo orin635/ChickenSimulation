@@ -1,0 +1,5 @@
+res://scenes/main_world.tscn
+res://scenes/chicken.tscn
+res://scenes/food.tscn
+res://scenes/coop.tscn
+res://scripts/chicken.gd

@@ -1,0 +1,82 @@
+[gd_scene load_steps=15 format=3 uid="uid://5ii6acl6x07q"]
+
+[ext_resource type="ArrayMesh" uid="uid://bwbestdr4vfyg" path="res://resources/grass.obj" id="1_0fehd"]
+[ext_resource type="ArrayMesh" uid="uid://cgeqewkybgbha" path="res://resources/tree_1.obj" id="1_dijjh"]
+[ext_resource type="ArrayMesh" uid="uid://ocudw3dip6p2" path="res://resources/tree_2.obj" id="2_m1rds"]
+[ext_resource type="PackedScene" uid="uid://dv55rewvssxn4" path="res://scenes/chicken.tscn" id="4_dsyhx"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hex2o"]
+rough = true
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fqxcq"]
+points = PackedVector3Array(152.379, 152.381, 11.9048, -152.381, -152.381, -2.38095, 152.379, -152.381, -2.38095, -152.381, -152.381, 11.9048, -152.381, 152.381, -2.38095, 152.379, -152.381, 11.9048, 152.379, 152.381, -2.38095, -152.381, 152.381, 11.9048)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m7518"]
+albedo_color = Color(0.0115446, 0.337791, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dof05"]
+albedo_color = Color(0.128173, 0.79478, 7.70092e-07, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pcgsr"]
+albedo_color = Color(0.529412, 0.301961, 0.0901961, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bq8wx"]
+albedo_color = Color(0.529412, 0.301961, 0.0901961, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x0k1p"]
+albedo_color = Color(0.529412, 0.301961, 0.0901961, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7ex7"]
+albedo_color = Color(0.529412, 0.301961, 0.0901961, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jgagj"]
+albedo_color = Color(0.529412, 0.301961, 0.0901961, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lq8ub"]
+albedo_color = Color(0.0293477, 0.502861, 3.17663e-06, 1)
+
+[node name="MainWorld" type="Node3D"]
+transform = Transform3D(0.26, 0, 0, 0, 0.26, 0, 0, 0, 0.26, 0, 0, 0)
+
+[node name="floor" type="StaticBody3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, -9.5, 0)
+physics_material_override = SubResource("PhysicsMaterial_hex2o")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(0.011, 0, 0, 0, -4.80826e-10, 0.011, 0, -0.011, -4.80826e-10, 0, 0.433592, 0)
+shape = SubResource("ConvexPolygonShape3D_fqxcq")
+
+[node name="Grass" type="MeshInstance3D" parent="floor"]
+transform = Transform3D(0.011, 0, 0, 0, -4.80826e-10, 0.011, 0, -0.011, -4.80826e-10, 0, 0.433592, 0)
+mesh = ExtResource("1_0fehd")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_m7518")
+
+[node name="TreeLow" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, -2.67646, 0.5, -6.82378)
+mesh = ExtResource("1_dijjh")
+surface_material_override/0 = SubResource("StandardMaterial3D_dof05")
+surface_material_override/1 = SubResource("StandardMaterial3D_pcgsr")
+surface_material_override/2 = SubResource("StandardMaterial3D_bq8wx")
+surface_material_override/3 = SubResource("StandardMaterial3D_x0k1p")
+surface_material_override/4 = SubResource("StandardMaterial3D_v7ex7")
+
+[node name="Tree2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.045, 0, 0, 0, 0.045, 0, 0, 0, 0.045, 5.01211, 0.5, 5.25447)
+mesh = ExtResource("2_m1rds")
+surface_material_override/0 = SubResource("StandardMaterial3D_jgagj")
+surface_material_override/1 = SubResource("StandardMaterial3D_lq8ub")
+
+[node name="chicken" parent="." instance=ExtResource("4_dsyhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.49097, 0)
+metadata/_edit_group_ = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1.62392e-07, -0.995458, 3.7151, -4.35129e-08, 3.7151, 0.995458, -3.84615, -1.02482e-14, -1.68121e-07, 11.5385, 7.69232, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.0137703, 0.999905, 0, -0.999905, -0.0137703, 0, 39.149, 0)
+light_energy = 1.305
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.09262, 0)

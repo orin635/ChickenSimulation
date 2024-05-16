@@ -1,0 +1,26 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1715825700
+ca.md::TextFile::-1::1715622170::0::1::::<><>::
+icon.svg::CompressedTexture2D::9190577403404130534::1715616877::1715616888::1::::<><>::
+image-1.png::CompressedTexture2D::5705686237213646311::1715825576::1715825582::1::::<><>::
+image-2.png::CompressedTexture2D::1562449995533448647::1715825599::1715825805::1::::<><>::
+image.png::CompressedTexture2D::8757440823470479914::1715825573::1715825582::1::::<><>::
+README.md::TextFile::-1::1715825253::0::1::::<><>::
+::res://resources/::1715822728
+chicken coop.obj::Mesh::1797713936247110685::1715822708::1715822728::1::::<><>::
+fence.obj::Mesh::4097953805827772386::1715819361::1715819365::1::::<><>::
+grass.obj::Mesh::3932915637135281186::1715621304::1715621304::1::::<><>::
+singing-club-of-birds_nature-sound-204240.mp3::AudioStreamMP3::4919151293523565468::1715822131::1715822139::1::::<><>::
+tree_1.obj::Mesh::5203211727344289586::1715620713::1715620900::1::::<><>::
+tree_2.obj::Mesh::987993462593466605::1715620959::1715620965::1::::<><>::
+::res://scenes/::1715825588
+CanvasLayer.gd::GDScript::-1::1715823949::0::1::::<>CanvasLayer<>::
+chicken.tscn::PackedScene::8697011213437183875::1715825588::0::1::::<><>::res://scripts/chicken.gd
+coop.tscn::PackedScene::6759938198144690158::1715825588::0::1::::<><>::uid://0u3c6jpp4vcn::::res://resources/chicken coop.obj<>res://scripts/coop.gd
+food.tscn::PackedScene::5418360642446189904::1715825588::0::1::::<><>::res://scripts/food.gd
+main_world.tscn::PackedScene::2122721430358392124::1715825588::0::1::::<><>::uid://bwbestdr4vfyg::::res://resources/grass.obj<>uid://cgeqewkybgbha::::res://resources/tree_1.obj<>res://scripts/main_world.gd<>uid://ocudw3dip6p2::::res://resources/tree_2.obj<>uid://dv55rewvssxn4::::res://scenes/chicken.tscn<>uid://byncx20armpo1::::res://resources/fence.obj<>uid://ccc4x516v4qjs::::res://resources/singing-club-of-birds_nature-sound-204240.mp3<>uid://c3ktgu3aedbl3::::res://scenes/coop.tscn<>res://scenes/CanvasLayer.gd
+::res://scripts/::1715824598
+chicken.gd::GDScript::-1::1715824598::0::1::::<>CharacterBody3D<>::
+coop.gd::GDScript::-1::1715823010::0::1::::<>Node3D<>::
+food.gd::GDScript::-1::1715818474::0::1::::<>CharacterBody3D<>::
+main_world.gd::GDScript::-1::1715823999::0::1::::<>Node3D<>::

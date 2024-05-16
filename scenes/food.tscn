@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjgxuxaw8wmxs"]
+
+[ext_resource type="Script" path="res://scripts/food.gd" id="1_6q1qm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tsu8g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pq655"]
+albedo_color = Color(0.690436, 0.466757, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pir1i"]
+material = SubResource("StandardMaterial3D_pq655")
+radius = 0.05
+height = 0.2
+
+[node name="food" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502002, 0)
+script = ExtResource("1_6q1qm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_tsu8g")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00228322, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_tsu8g")
+
+[node name="foodbits" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.502002, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="foodbits"]
+transform = Transform3D(-0.000171217, 1, 0, -0.545, -0.00031416, 0, 0, 0, 1, 0.0103408, 0.0310744, -0.0067879)
+mesh = SubResource("CapsuleMesh_pir1i")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="foodbits"]
+transform = Transform3D(-0.000139361, 0.813943, -0.580944, -0.545, -0.00031416, 0, -9.94677e-05, 0.580944, 0.813943, 0.0103408, 0.0310744, 0.0545179)
+mesh = SubResource("CapsuleMesh_pir1i")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="foodbits"]
+transform = Transform3D(-0.000150851, 0.881048, 0.473028, -0.545, -0.00031416, 0, 8.09905e-05, -0.473027, 0.881048, 0.0103408, 0.0310744, -0.106203)
+mesh = SubResource("CapsuleMesh_pir1i")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="foodbits"]
+transform = Transform3D(-9.26317e-05, 0.541018, -0.841011, -0.545, -0.00031416, 0, -0.000143996, 0.841011, 0.541018, 0.0915295, 0.0310744, -0.0067879)
+mesh = SubResource("CapsuleMesh_pir1i")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="foodbits"]
+transform = Transform3D(3.14868e-05, -0.1839, -0.982945, -0.545, -0.00031416, 0, -0.000168297, 0.982945, -0.1839, -0.0890742, 0.0310744, 0.092627)
+mesh = SubResource("CapsuleMesh_pir1i")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="foodbits"]
+transform = Transform3D(6.16014e-05, -0.359785, -0.933035, -0.545, -0.00031416, 0, -0.000159752, 0.933035, -0.359785, -0.122212, 0.0310744, -0.117801)
+mesh = SubResource("CapsuleMesh_pir1i")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="foodbits"]
+transform = Transform3D(-9.13843e-05, 0.533732, 0.845653, -0.545, -0.00031416, 0, 0.00014479, -0.845653, 0.533732, -0.165292, 0.0310744, 0.0648147)
+mesh = SubResource("CapsuleMesh_pir1i")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="foodbits"]
+transform = Transform3D(0.000166259, -0.971038, 0.238923, -0.545, -0.00031416, 0, 4.09078e-05, -0.238923, -0.971038, -0.180204, 0.0310744, -0.0067879)
+mesh = SubResource("CapsuleMesh_pir1i")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="foodbits"]
+transform = Transform3D(-0.000171217, 1, 0, -0.545, -0.00031416, 0, 0, 0, 1, 0.0103408, 0.0310744, -0.172479)
+mesh = SubResource("CapsuleMesh_pir1i")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="foodbits"]
+transform = Transform3D(-0.000171217, 1, 0, -0.545, -0.00031416, 0, 0, 0, 1, 0.107968, 0.0310744, -0.0829883)
+mesh = SubResource("CapsuleMesh_pir1i")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="foodbits"]
+transform = Transform3D(-9.57163e-05, 0.559034, -0.829145, -0.545, -0.00031416, 0, -0.000141964, 0.829145, 0.559034, 0.0103408, 0.0659671, -0.0067879)
+mesh = SubResource("CapsuleMesh_pir1i")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="foodbits"]
+transform = Transform3D(-8.72493e-05, 0.509582, 0.860422, -0.545, -0.00031416, 0, 0.000147319, -0.860422, 0.509582, -0.118768, 0.0859429, -0.0510031)
+mesh = SubResource("CapsuleMesh_pir1i")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="foodbits"]
+transform = Transform3D(-0.106704, -0.299399, 0.933824, -0.45613, 0.5473, -1.77636e-15, -0.27854, -0.781551, -0.357732, -0.0762515, 0.0310744, 0.168317)
+mesh = SubResource("CapsuleMesh_pir1i")
+skeleton = NodePath("../../..")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

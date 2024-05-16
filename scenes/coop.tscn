@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3ktgu3aedbl3"]
+
+[ext_resource type="ArrayMesh" uid="uid://0u3c6jpp4vcn" path="res://resources/chicken coop.obj" id="1_b2pb6"]
+[ext_resource type="Script" path="res://scripts/coop.gd" id="1_yfgxj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v025g"]
+albedo_color = Color(0.26199, 0.177153, 0, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tjel6"]
+points = PackedVector3Array(-0.374293, -1.7443, 0.0722103, -1.6101, -0.516502, 1.33885, -1.60466, -0.508914, 0.880124, -0.374293, -1.69759, 0.00237216, 0.0616872, -1.7443, 0.0722103, -0.171955, -0.623916, 3.046, -0.416712, -0.623916, 2.76933, -1.07613, -0.623916, 1.99992, -1.6101, -0.516502, 1.45733, -1.6101, 0.547211, 1.33885, -1.60466, 0.54318, 0.880124, -0.98403, -0.579812, -0.003, 0.0616872, -1.69759, 0.00237216, 0.706584, -0.649762, 0.223825, 0.70545, -0.655927, 0.593011, 0.70545, -0.655927, 0.725226, 0.691386, -0.623916, 2.03574, 0.481108, -0.623916, 2.28345, 0.0605531, -0.623916, 2.77859, -0.171955, -0.576967, 3.046, -1.6101, 0.547211, 1.45733, -1.05889, 0.677152, 0.223825, -0.98403, 0.609336, -0.003, 0.621747, -0.579812, -0.003, 0.707265, -0.466707, 0.223825, 0.706584, -0.649762, 0.356039, 0.704316, -0.576967, 1.98142, 0.691386, 0.649646, 2.03574, 0.270831, 0.602934, 2.53117, 0.0605531, 0.649646, 2.77859, -0.171955, 0.649646, 3.0457, -0.416712, 0.649646, 2.76933, -0.628123, 0.649646, 2.52162, -0.839309, 0.649646, 2.2739, -1.06796, 0.649646, 2.0038, -1.05571, 0.673595, 0.725226, -1.05889, 0.677152, 0.356039, -0.860858, 0.677863, 0.223825, 0.621747, 0.609336, -0.003, 0.707265, 0.49623, 0.223825, 0.707265, -0.466707, 0.356039, 0.704316, 0.602934, 1.98142, 0.270831, 0.649646, 2.53117, 0.70545, 0.673595, 0.725226, 0.498802, 0.677863, 0.356039, -0.860858, 0.677863, 0.356039, 0.498802, 0.677863, 0.223825, 0.706584, 0.677152, 0.223825, 0.707265, 0.49623, 0.356039, 0.706584, 0.677152, 0.356039)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_alsxi"]
+size = Vector3(2.26831, 3.13324, 2.21582)
+
+[node name="coop" type="Node3D"]
+script = ExtResource("1_yfgxj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.14706, -1.18875, 0)
+
+[node name="ChickenCoop" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0100074, 0, 1.1932)
+mesh = ExtResource("1_b2pb6")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_v025g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0100074, 0, 1.1932)
+shape = SubResource("ConvexPolygonShape3D_tjel6")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.298706, 1.49771, 0.60791)
+shape = SubResource("BoxShape3D_alsxi")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
